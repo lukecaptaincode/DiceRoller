@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lukecaptaincode.diceroller.scatterDice"
+    android:background="@color/Black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="270dp"
+            android:scaleType="fitStart"
+            android:id="@+id/ScatterDice_mainImage_img"
+            android:src="@drawable/template"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/scatterDice" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ScatterDice_Text"
+            android:id="@+id/ScatterDice_scatterButton_btn"
+            android:background="@drawable/buttonshapesmall"
+            android:layout_below="@+id/ScatterDice_mainImage_img"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="44dp"
+            android:layout_marginStart="44dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/ScatterDice_scatterText_lbl"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_marginTop="41dp"
+            android:layout_below="@+id/ScatterDice_scatterButton_btn"
+            android:layout_alignLeft="@+id/ScatterDice_scatterButton_btn"
+            android:layout_alignStart="@+id/ScatterDice_scatterButton_btn" />
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
