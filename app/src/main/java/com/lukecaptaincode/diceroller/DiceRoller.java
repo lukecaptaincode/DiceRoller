@@ -19,7 +19,7 @@ import com.google.android.gms.ads.AdView;
 
 
 public class DiceRoller extends ActionBarActivity {
-
+//tits
     int userDiceNo;
     int userSidesNo;
     int [] results;
