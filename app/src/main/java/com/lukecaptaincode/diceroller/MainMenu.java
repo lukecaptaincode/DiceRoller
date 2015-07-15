@@ -49,6 +49,7 @@ public class MainMenu extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
+                spinner.setVisibility(View.VISIBLE);
                 Intent myIntent = new Intent(MainMenu.this, DiceRoller.class);
                 startActivity(myIntent);
             }
@@ -58,6 +59,7 @@ public class MainMenu extends ActionBarActivity {
         woundsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                spinner.setVisibility(View.VISIBLE);
                 Intent woundsIntent = new Intent(MainMenu.this, WoundCounter.class);
                 startActivity(woundsIntent);
             }
