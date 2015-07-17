@@ -33,8 +33,7 @@ public class MainMenu extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        spinner = (ProgressBar)findViewById(R.id.progressBar1);
-        spinner.setVisibility(View.GONE);
+
         //ads
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -49,7 +48,7 @@ public class MainMenu extends ActionBarActivity {
 
             @Override
             public void onClick(View v) {
-                spinner.setVisibility(View.VISIBLE);
+
                 Intent myIntent = new Intent(MainMenu.this, DiceRoller.class);
                 startActivity(myIntent);
             }
@@ -59,7 +58,7 @@ public class MainMenu extends ActionBarActivity {
         woundsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                spinner.setVisibility(View.VISIBLE);
+
                 Intent woundsIntent = new Intent(MainMenu.this, WoundCounter.class);
                 startActivity(woundsIntent);
             }
@@ -69,7 +68,7 @@ public class MainMenu extends ActionBarActivity {
         scatterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                spinner.setVisibility(View.VISIBLE);
+
                 Intent scatterIntent = new Intent(MainMenu.this, scatterDice.class);
                 startActivity(scatterIntent);
             }
