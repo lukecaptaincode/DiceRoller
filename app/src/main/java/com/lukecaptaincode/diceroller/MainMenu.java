@@ -83,6 +83,6 @@ public class MainMenu extends ActionBarActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        spinner.setVisibility(View.GONE);
+
     }
 }
