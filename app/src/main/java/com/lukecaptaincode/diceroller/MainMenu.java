@@ -29,6 +29,7 @@ public class MainMenu extends ActionBarActivity {
 
     private ProgressBar spinner;
 
+    //Done
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
