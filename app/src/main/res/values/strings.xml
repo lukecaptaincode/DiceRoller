@@ -22,7 +22,7 @@
     <string name="WoundCounter_addChar_btn">+</string>
     <string name="title_activity_scatter_dice">Dice Roller</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_contentenu_">DUMMY\nCONTENT</string>
     <string name="title_activity_scatter_roller">Dice Roller</string>
     <string name="title_activity_wound_counter">Dice Roller</string>
     <string name="WoundsCounter_header_lbl">Wound Counter</string>
@@ -37,6 +37,12 @@
     <string name="ScatterDice_Text">Scatter</string>
     <string name="mainMenu_ScatterDice_text">Scatter Dice</string>
     <string name="mainHelpText">To use the scatter dice\r\n1. Place the device face up on the board.\r\n2. Place the template over desired units.\r\n3. Hit scatter on the device and move in the indicated direction by the specified inches.</string>
-    <string name="mainAboutText">Version 1.0\r\nFor any questions about this app please email me at lukecaptaincode@gmail.com\r\nThank you for downloading my app!</string>
+    <string name="mainAboutText">Version B.1.0\r\nFor any questions about this app please email me at lukecaptaincode@gmail.com\r\nThank you for downloading my app!</string>
     <string name="mainMenu_aboutButton_btn">About</string>
+    <!--banner add ids -->
+    <string name="mainMenu_adId">ca-app-pub-5946653721028511/9467200388</string>
+    <string name="diceRoller_adId">ca-app-pub-5946653721028511/1943933589</string>
+    <string name="rollerResults_adId">ca-app-pub-5946653721028511/3420666780</string>
+    <string name="woundCounter_adId">ca-app-pub-5946653721028511/4897399980</string>
+    <string name="scatterDice_adId">ca-app-pub-5946653721028511/6374133189</string>
 </resources>

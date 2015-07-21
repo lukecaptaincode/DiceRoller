@@ -46,7 +46,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     ads:adSize="BANNER"
-    ads:adUnitId="@string/banner_ad_unit_id"
+    ads:adUnitId="@string/rollerResults_adId"
     android:layout_alignBottom="@+id/Results_scroller_scrl"
     android:layout_centerHorizontal="true">
 </com.google.android.gms.ads.AdView>
