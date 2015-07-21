@@ -44,6 +44,18 @@
             android:layout_below="@+id/ScatterDice_scatterButton_btn"
             android:layout_alignLeft="@+id/ScatterDice_scatterButton_btn"
             android:layout_alignStart="@+id/ScatterDice_scatterButton_btn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Help"
+            android:id="@+id/ScatterDice_helpButton_btn"
+            android:background="@drawable/buttonshapesmall"
+            android:layout_above="@+id/ScatterDice_scatterText_lbl"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="51dp"
+            android:layout_marginEnd="51dp" />
     </RelativeLayout>
 
     <com.google.android.gms.ads.AdView

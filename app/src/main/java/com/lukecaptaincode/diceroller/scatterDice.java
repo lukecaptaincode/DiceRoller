@@ -3,6 +3,8 @@ package com.lukecaptaincode.diceroller;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,12 +32,15 @@ public class scatterDice extends ActionBarActivity {
     Button scatterButton;
     ImageView scatterImage;
     TextView scatterText;
+    Button helpButton;
     //random
     SecureRandom random;
     int randRes;
     int imageChoose;
     //typeface
     Typeface myTypeface;
+    //Fragment
+    FragmentManager fm = getSupportFragmentManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +57,7 @@ public class scatterDice extends ActionBarActivity {
         scatterImage = (ImageView) findViewById(R.id.ScatterDice_mainImage_img);
         scatterButton.setTypeface(myTypeface);
         scatterText.setTypeface(myTypeface);
+        helpButton.setTypeface(myTypeface);
 
     }
 
@@ -63,8 +69,21 @@ public class scatterDice extends ActionBarActivity {
                 scatterLogic(v);
             }
         });
+        helpButton = (Button)findViewById(R.id.ScatterDice_helpButton_btn);
+        helpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                helpLogic(v);
+
+            }
+        });
     }
 
+    public void helpLogic(View v)
+    {
+        ScatterHelpFragment helpFrag = new ScatterHelpFragment();
+        helpFrag.show(fm, "Help");
+    }
     public void scatterLogic(View v) {
         random = new SecureRandom();
         randRes = random.nextInt(12 - 2 + 1) + 2;
