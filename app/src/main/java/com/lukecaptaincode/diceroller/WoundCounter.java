@@ -8,7 +8,6 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
@@ -88,7 +87,6 @@ public class WoundCounter extends ActionBarActivity {
                     return false;
                 }
             });
-            nameBoxes[i].setImeOptions(EditorInfo.IME_ACTION_DONE);
         }
         //Wound Boxes
         woundBoxId = new int[20];
@@ -111,7 +109,6 @@ public class WoundCounter extends ActionBarActivity {
                     return false;
                 }
             });
-            woundBoxes[i].setImeOptions(EditorInfo.IME_ACTION_DONE);
         }
     }
 
@@ -308,11 +305,6 @@ public class WoundCounter extends ActionBarActivity {
             String storage = nameBoxes[id].getText().toString() + woundBoxes[id].getText().toString();
             editor.putString("key" + id, storage);
             editor.commit();
-            view.clearFocus();
-            view.requestFocus();
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-            imm.hideSoftInputFromWindow(woundBoxes[id].getWindowToken(), 0);
-            imm.hideSoftInputFromWindow(nameBoxes[id].getWindowToken(), 0);
         }
     }//end of add button logic method
 
@@ -321,7 +313,6 @@ public class WoundCounter extends ActionBarActivity {
         nameBoxes[id].setBackgroundDrawable(getResources().getDrawable(R.drawable.editextbacksmall));
         nameBoxes[id].setTextColor(Color.BLACK);
         nameBoxes[id].setFocusable(true);
-        nameBoxes[id].setFocusableInTouchMode(true);
         nameBoxes[id].setClickable(true);
         nameBoxes[id].setEnabled(true);
         nameBoxes[id].setText("Name");
@@ -329,7 +320,6 @@ public class WoundCounter extends ActionBarActivity {
         woundBoxes[id].setTextColor(Color.BLACK);
         woundBoxes[id].setText("0");
         woundBoxes[id].setFocusable(true);
-        woundBoxes[id].setFocusableInTouchMode(true);
         woundBoxes[id].setClickable(true);
         woundBoxes[id].setEnabled(true);
         woundButtons[id].setEnabled(true);
@@ -337,11 +327,6 @@ public class WoundCounter extends ActionBarActivity {
         String storage = nameBoxes[id].getText().toString()+woundBoxes[id].getText().toString();
         editor.putString("key" + id, storage);
         editor.commit();
-        view.clearFocus();
-        view.requestFocus();
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.hideSoftInputFromWindow(woundBoxes[id].getWindowToken(), 0);
-        imm.hideSoftInputFromWindow(nameBoxes[id].getWindowToken(), 0);
 
     }//end of delete button logic
 
@@ -361,23 +346,21 @@ public class WoundCounter extends ActionBarActivity {
 
     public void nameBoxesClick(View view){//start name boxes click method
         int id = ((Integer)view.getTag());
-        nameBoxes[id].requestFocus();
+        nameBoxes[id].clearFocus();
         nameBoxes[id].setText("");
-        ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)).toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
-     /*   InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         // only will trigger it if no physical keyboard is open
-        mgr.showSoftInput(nameBoxes[id], InputMethodManager.SHOW_IMPLICIT);*/
+        mgr.showSoftInput(nameBoxes[id], InputMethodManager.SHOW_IMPLICIT);
 
     }//end name boxes click method
 
     public void woundBoxesClick(View view){//start name boxes click method
         int id = ((Integer)view.getTag());
-        woundBoxes[id].requestFocus();
+        woundBoxes[id].clearFocus();
         woundBoxes[id].setText("");
-        ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)).toggleSoftInput(InputMethodManager.SHOW_FORCED, InputMethodManager.HIDE_IMPLICIT_ONLY);
-       /* InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager mgr = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         // only will trigger it if no physical keyboard is open
-        mgr.showSoftInput(woundBoxes[id], InputMethodManager.SHOW_IMPLICIT);*/
+        mgr.showSoftInput(woundBoxes[id], InputMethodManager.SHOW_IMPLICIT);
 
     }//end name boxes click method
 
@@ -388,12 +371,12 @@ public class WoundCounter extends ActionBarActivity {
             if (!nameBoxes[i].getText().toString().equals("Name"))
             {
                 nameBoxes[i].setBackgroundColor(Color.parseColor("#A6A6B8"));
-                nameBoxes[i].setTextColor(Color.BLACK);
+                nameBoxes[i].setTextColor(-16777216);
                 nameBoxes[i].setFocusable(false);
                 nameBoxes[i].setClickable(false);
                 nameBoxes[i].setEnabled(false);
                 woundBoxes[i].setBackgroundColor(Color.parseColor("#A6A6B8"));
-                woundBoxes[i].setTextColor(Color.BLACK);
+                woundBoxes[i].setTextColor(-16777216);
                 woundBoxes[i].setFocusable(false);
                 woundBoxes[i].setClickable(false);
                 woundBoxes[i].setEnabled(false);
