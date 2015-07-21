@@ -87,20 +87,21 @@
         android:text="@string/DiceRoller_roll_btn"
         android:id="@+id/DiceRoller_roll_btn"
         android:background="@drawable/buttonshapesmall"
-        android:layout_above="@+id/adView"
-        android:layout_alignLeft="@+id/adView"
-        android:layout_alignStart="@+id/adView" />
+        android:layout_below="@+id/DiceRoller_noSides_txt"
+        android:layout_alignRight="@+id/DiceRoller_noSides_txt"
+        android:layout_alignEnd="@+id/DiceRoller_noSides_txt"
+        android:layout_marginTop="68dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/DiceRoller_shake_lbl"
         android:id="@+id/DiceRoller_shake_lbl"
-        android:layout_alignTop="@+id/DiceRoller_roll_btn"
-        android:layout_toRightOf="@+id/DiceRoller_noSides_txt"
-        android:layout_toEndOf="@+id/DiceRoller_noSides_txt"
         android:textSize="25sp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/DiceRoller_roll_btn"
+        android:layout_toRightOf="@+id/DiceRoller_noDice_lbl"
+        android:layout_toEndOf="@+id/DiceRoller_noDice_lbl" />
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
