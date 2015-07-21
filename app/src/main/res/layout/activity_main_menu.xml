@@ -55,6 +55,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+    <Button
+        android:background="@drawable/buttonshapesmaller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mainMenu_aboutButton_btn"
+        android:id="@+id/mainMenu_aboutButton_btn"
+        android:layout_below="@+id/MainMenu_scatter_btn"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
     <com.google.android.gms.ads.AdView
@@ -66,6 +75,7 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id">
     </com.google.android.gms.ads.AdView>
+
 
 
 

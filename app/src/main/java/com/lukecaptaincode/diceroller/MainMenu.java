@@ -6,6 +6,7 @@ import android.app.Application;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -28,7 +29,8 @@ import java.util.logging.Handler;
 public class MainMenu extends ActionBarActivity {
 
     private ProgressBar spinner;
-
+    //Fragment
+    FragmentManager fm = getSupportFragmentManager();
     //Done
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +74,15 @@ public class MainMenu extends ActionBarActivity {
 
                 Intent scatterIntent = new Intent(MainMenu.this, scatterDice.class);
                 startActivity(scatterIntent);
+            }
+        });
+        Button aboutBtn = (Button)findViewById(R.id.mainMenu_aboutButton_btn);
+        aboutBtn.setTypeface(myTypeface);
+        aboutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AboutFragment aboutFrag = new AboutFragment();
+                aboutFrag.show(fm, "About");
             }
         });
 

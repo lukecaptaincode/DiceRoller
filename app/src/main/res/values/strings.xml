@@ -37,4 +37,6 @@
     <string name="ScatterDice_Text">Scatter</string>
     <string name="mainMenu_ScatterDice_text">Scatter Dice</string>
     <string name="mainHelpText">To use the scatter dice\r\n1. Place the device face up on the board.\r\n2. Place the template over desired units.\r\n3. Hit scatter on the device and move in the indicated direction by the specified inches.</string>
+    <string name="mainAboutText">Version 1.0\r\nFor any questions about this app please email me at lukecaptaincode@gmail.com\r\nThank you for downloading my app!</string>
+    <string name="mainMenu_aboutButton_btn">About</string>
 </resources>
