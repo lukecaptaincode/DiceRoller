@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dice Roller</string>
+    <string name="app_name">Dice Roller 40k</string>
     <string name="SplashScreen_Title_lbl">Dice\r\nRoller</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_main_menu">Dice Roller</string>
