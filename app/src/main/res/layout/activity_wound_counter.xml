@@ -70,7 +70,8 @@
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp">
 
                 <EditText
                     android:id="@+id/WoundsCounter_charName1_txt"
@@ -147,7 +148,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout1"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound2_btn"
@@ -219,7 +221,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout2"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound3_btn"
@@ -291,7 +294,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout3"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound4_btn"
@@ -363,7 +367,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout4"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound5_btn"
@@ -435,7 +440,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout5"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound6_btn"
@@ -507,7 +513,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout6"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound7_btn"
@@ -579,7 +586,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout7"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound8_btn"
@@ -651,7 +659,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout8"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound9_btn"
@@ -723,7 +732,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout9"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound10_btn"
@@ -795,7 +805,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout10"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound11_btn"
@@ -867,7 +878,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout11"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound12_btn"
@@ -939,7 +951,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout12"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound13_btn"
@@ -1011,7 +1024,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout13"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound14_btn"
@@ -1083,7 +1097,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout14"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound15_btn"
@@ -1155,7 +1170,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout15"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound16_btn"
@@ -1227,7 +1243,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout16"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound17_btn"
@@ -1299,7 +1316,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout17"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound18_btn"
@@ -1371,7 +1389,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout18"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound19_btn"
@@ -1443,7 +1462,8 @@
                 tools:context="com.lukecaptaincode.diceroller.RollResults"
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/RelLayout19"
-                android:layout_alignParentLeft="true">
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
 
                 <Button
                     android:id="@+id/WoundCounter_wound20_btn"
