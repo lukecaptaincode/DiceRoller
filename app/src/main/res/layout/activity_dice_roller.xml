@@ -87,10 +87,10 @@
         android:text="@string/DiceRoller_roll_btn"
         android:id="@+id/DiceRoller_roll_btn"
         android:background="@drawable/buttonshapesmall"
-        android:layout_below="@+id/DiceRoller_noSides_txt"
-        android:layout_alignRight="@+id/DiceRoller_noSides_txt"
-        android:layout_alignEnd="@+id/DiceRoller_noSides_txt"
-        android:layout_marginTop="68dp" />
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/DiceRoller_MinusSort_rdb"
+        android:layout_alignLeft="@+id/adView"
+        android:layout_alignStart="@+id/adView" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -112,6 +112,61 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/diceRoller_adId">
     </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Sort by:"
+        android:id="@+id/DiceRoller_Filter_lbl"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:height="50dp"
+        android:width="70dp"
+        android:id="@+id/DiceRoller_Filter_txt"
+        android:textColor="#000000"
+        android:color="#4F4F4F"
+        android:gravity="center_horizontal"
+        android:background="@drawable/editextback"
+        android:maxHeight="50dp"
+        android:maxWidth="100dp"
+        android:minHeight="50dp"
+        android:minWidth="100dp"
+        android:longClickable="false"
+        android:linksClickable="false"
+        android:textSize="35sp"
+        android:text="0"
+        android:shadowColor="#000000"
+        android:layout_alignTop="@+id/DiceRoller_PlusSort_rdb"
+        android:layout_toRightOf="@+id/DiceRoller_Filter_lbl"
+        android:layout_toEndOf="@+id/DiceRoller_Filter_lbl" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:id="@+id/DiceRoller_PlusSort_rdb"
+        android:layout_below="@+id/DiceRoller_Filter_lbl"
+        android:layout_alignLeft="@+id/DiceRoller_roll_btn"
+        android:layout_alignStart="@+id/DiceRoller_roll_btn" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/DiceRoller_MinusSort_rdb"
+        android:layout_below="@+id/DiceRoller_Filter_txt"
+        android:layout_alignLeft="@+id/DiceRoller_PlusSort_rdb"
+        android:layout_alignStart="@+id/DiceRoller_PlusSort_rdb" />
 
 
 </RelativeLayout>
