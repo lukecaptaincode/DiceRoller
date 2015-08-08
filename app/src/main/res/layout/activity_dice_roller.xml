@@ -13,12 +13,11 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/DiceRoller_noDice_lbl"
         android:id="@+id/DiceRoller_noDice_lbl"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="39dp"
-        android:textSize="40sp"
-        android:textColor="#ffffff"/>
+        android:layout_alignParentStart="true" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,8 +48,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/DiceRoller_noSides_lbl"
         android:id="@+id/DiceRoller_noSides_lbl"
-        android:layout_marginTop="36dp"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textColor="#ffffff"
         android:layout_below="@+id/DiceRoller_noDice_txt"
         android:layout_alignParentLeft="true"
@@ -119,9 +117,9 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Sort by:"
         android:id="@+id/DiceRoller_Filter_lbl"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textColor="#ffffff"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/DiceRoller_noSides_txt"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -147,13 +145,15 @@
         android:text="0"
         android:shadowColor="#000000"
         android:layout_alignTop="@+id/DiceRoller_PlusSort_rdb"
-        android:layout_toRightOf="@+id/DiceRoller_Filter_lbl"
-        android:layout_toEndOf="@+id/DiceRoller_Filter_lbl" />
+        android:layout_toRightOf="@+id/DiceRoller_noSides_lbl"
+        android:layout_toEndOf="@+id/DiceRoller_noSides_lbl"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="47dp" />
 
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="+"
+        android:text=">"
         android:id="@+id/DiceRoller_PlusSort_rdb"
         android:layout_below="@+id/DiceRoller_Filter_lbl"
         android:layout_alignLeft="@+id/DiceRoller_roll_btn"
@@ -162,11 +162,20 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-"
+        android:text="<"
         android:id="@+id/DiceRoller_MinusSort_rdb"
         android:layout_below="@+id/DiceRoller_Filter_txt"
         android:layout_alignLeft="@+id/DiceRoller_PlusSort_rdb"
         android:layout_alignStart="@+id/DiceRoller_PlusSort_rdb" />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="="
+        android:id="@+id/DiceRoller_EqualSort_rdb"
+        android:layout_alignBottom="@+id/DiceRoller_Filter_txt"
+        android:layout_toRightOf="@+id/DiceRoller_roll_btn"
+        android:layout_toEndOf="@+id/DiceRoller_roll_btn" />
 
 
 </RelativeLayout>
