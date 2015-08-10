@@ -42,13 +42,8 @@ public class DiceRoller extends ActionBarActivity {
         mAdView.loadAd(adRequest);
         //gui elements
         final EditText noDiceBox = (EditText)findViewById(R.id.DiceRoller_noDice_txt);
-        final EditText sortBox = (EditText)findViewById(R.id.DiceRoller_Filter_txt);
-        RadioButton lessThanRadio = (RadioButton)findViewById(R.id.DiceRoller_MinusSort_rdb);
-        RadioButton greaterThanRadio = (RadioButton)findViewById(R.id.DiceRoller_PlusSort_rdb);
-        RadioButton equalsRadio= (RadioButton)findViewById(R.id.DiceRoller_EqualSort_rdb);
         TextView noSidesText = (TextView)findViewById(R.id.DiceRoller_noSides_lbl);
         TextView shakeText = (TextView)findViewById(R.id.DiceRoller_shake_lbl);
-        TextView sortText = (TextView)findViewById(R.id.DiceRoller_Filter_lbl);
         final EditText noSidesBox = (EditText)findViewById(R.id.DiceRoller_noSides_txt);
         Button rollButton = (Button)findViewById(R.id.DiceRoller_roll_btn);
         //set typeface
@@ -58,11 +53,6 @@ public class DiceRoller extends ActionBarActivity {
         noSidesBox.setTypeface(myTypeface);
         noSidesText.setTypeface(myTypeface);
         shakeText.setTypeface(myTypeface);
-        sortBox.setTypeface(myTypeface);
-        lessThanRadio.setTypeface(myTypeface);
-        greaterThanRadio.setTypeface(myTypeface);
-        equalsRadio.setTypeface(myTypeface);
-        sortText.setTypeface(myTypeface);
         //logic class object
         myRollLogic = new RollLogic();
 

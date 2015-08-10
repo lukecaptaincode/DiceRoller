@@ -45,4 +45,10 @@
     <string name="rollerResults_adId">ca-app-pub-5946653721028511/3420666780</string>
     <string name="woundCounter_adId">ca-app-pub-5946653721028511/4897399980</string>
     <string name="scatterDice_adId">ca-app-pub-5946653721028511/6374133189</string>
+    <string name="lessThan"><![CDATA[<]]></string>
+    <string name="Equals">=</string>
+    <string name="zero">0</string>
+    <string name="SortBy">Sort by:</string>
+    <string name="LessThan"><![CDATA[>]]></string>
+    <string name="SortBtn">Sort</string>
 </resources>

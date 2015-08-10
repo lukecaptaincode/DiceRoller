@@ -1,29 +1,16 @@
 package com.lukecaptaincode.diceroller;
 
-import android.app.ActionBar;
-import android.app.AlertDialog;
-import android.app.Application;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
-import java.util.logging.Handler;
 
 
 public class MainMenu extends ActionBarActivity {
