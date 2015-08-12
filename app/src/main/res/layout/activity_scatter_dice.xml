@@ -15,11 +15,11 @@
             android:layout_height="270dp"
             android:scaleType="fitStart"
             android:id="@+id/ScatterDice_mainImage_img"
-            android:src="@drawable/template"
+            android:src="@drawable/scatterhit"
+            android:contentDescription="@string/scatterDice"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:contentDescription="@string/scatterDice" />
+            android:layout_alignLeft="@+id/ScatterDice_scatterButton_btn"
+            android:layout_alignStart="@+id/ScatterDice_scatterButton_btn" />
 
         <Button
             android:layout_width="wrap_content"
