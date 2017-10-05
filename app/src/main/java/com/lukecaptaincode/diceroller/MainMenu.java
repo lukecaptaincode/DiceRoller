@@ -2,20 +2,19 @@ package com.lukecaptaincode.diceroller;
 
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ProgressBar;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
-public class MainMenu extends ActionBarActivity {
+public class MainMenu extends AppCompatActivity {
 
-    private ProgressBar spinner;
+
     //Fragment
     FragmentManager fm = getSupportFragmentManager();
     //Done
@@ -25,16 +24,15 @@ public class MainMenu extends ActionBarActivity {
         setContentView(R.layout.activity_main_menu);
 
         //ads
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
-        Typeface myTypeface = Typeface.createFromAsset(getAssets(),"Nurjan.ttf");
-        Button diceRoller_btn = (Button)findViewById(R.id.MainMenu_DiceRoller_btn);
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Heroic.ttf");
+        Button diceRoller_btn = findViewById(R.id.MainMenu_DiceRoller_btn);
         diceRoller_btn.setTypeface(myTypeface);
 
-        Button diceRoller = (Button) findViewById(R.id.MainMenu_DiceRoller_btn);
-        diceRoller.setOnClickListener(new View.OnClickListener() {
+        diceRoller_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -43,7 +41,7 @@ public class MainMenu extends ActionBarActivity {
                 startActivity(myIntent);
             }
         });
-        Button woundsBtn = (Button)findViewById(R.id.MainMenu_wounds_btn);
+        Button woundsBtn = findViewById(R.id.MainMenu_wounds_btn);
         woundsBtn.setTypeface(myTypeface);
         woundsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +51,7 @@ public class MainMenu extends ActionBarActivity {
                 startActivity(woundsIntent);
             }
         });
-        Button scatterBtn = (Button)findViewById(R.id.MainMenu_scatter_btn);
+        Button scatterBtn = findViewById(R.id.MainMenu_scatter_btn);
         scatterBtn.setTypeface(myTypeface);
         scatterBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +61,7 @@ public class MainMenu extends ActionBarActivity {
                 startActivity(scatterIntent);
             }
         });
-        Button aboutBtn = (Button)findViewById(R.id.mainMenu_aboutButton_btn);
+        Button aboutBtn = findViewById(R.id.mainMenu_aboutButton_btn);
         aboutBtn.setTypeface(myTypeface);
         aboutBtn.setOnClickListener(new View.OnClickListener() {
             @Override

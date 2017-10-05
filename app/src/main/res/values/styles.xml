@@ -27,4 +27,8 @@
     <!-- Backward-compatible version of ?android:attr/buttonBarButtonStyle -->
     <style name="ButtonBarButton" />
 
+    <style name="mainAppTheme" parent="AppTheme">
+        <item name="colorPrimary">@color/primary</item>
+    </style>
+
 </resources>

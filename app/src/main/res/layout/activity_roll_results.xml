@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#000000"
+    android:background="@color/dark"
     tools:context="com.lukecaptaincode.diceroller.RollResults">
 
     <TextView
@@ -53,8 +53,8 @@
         android:textSize="15sp"
         android:checked="false"
         android:layout_above="@+id/Results_scroller_scrl"
-        android:layout_toRightOf="@+id/Results_Filter_txt"
-        android:layout_toEndOf="@+id/Results_Filter_txt" />
+        android:layout_toLeftOf="@+id/Results_MinusSort_rdb"
+        android:layout_toStartOf="@+id/Results_MinusSort_rdb" />
 
     <CheckBox
         android:id="@+id/Results_MinusSort_rdb"
@@ -65,9 +65,10 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:checked="false"
-        android:layout_alignTop="@+id/Results_EqualSort_rdb"
-        android:layout_toRightOf="@+id/Results_PlusSort_rdb"
-        android:layout_toEndOf="@+id/Results_PlusSort_rdb" />
+        android:layout_alignBaseline="@+id/Results_EqualSort_rdb"
+        android:layout_alignBottom="@+id/Results_EqualSort_rdb"
+        android:layout_toLeftOf="@+id/Results_Sort_btn"
+        android:layout_toStartOf="@+id/Results_Sort_btn" />
 
     <CheckBox
         android:id="@+id/Results_EqualSort_rdb"
@@ -78,9 +79,9 @@
         android:textColor="@color/white"
         android:textSize="15sp"
         android:checked="false"
-        android:layout_below="@+id/Results_Filter_lbl"
-        android:layout_toRightOf="@+id/Results_Filter_txt"
-        android:layout_toEndOf="@+id/Results_Filter_txt" />
+        android:layout_alignTop="@+id/Results_Sort_btn"
+        android:layout_alignLeft="@+id/Results_PlusSort_rdb"
+        android:layout_alignStart="@+id/Results_PlusSort_rdb" />
 
     <Button
         android:id="@+id/Results_Sort_btn"
@@ -88,6 +89,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/buttonshapesmaller"
         android:text="@string/SortBtn"
+        android:textSize="26sp"
         android:layout_alignBottom="@+id/Results_PlusSort_rdb"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -97,7 +99,7 @@
         android:id="@+id/Results_scroller_scrl"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#000000"
+        android:background="@color/dark"
         android:fillViewport="false"
         android:layout_below="@+id/Results_Filter_txt"
         android:layout_alignParentLeft="true"
@@ -108,7 +110,7 @@
             android:id="@+id/LineLay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="@color/dark"
             android:orientation="vertical"
             android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -137,6 +139,7 @@
         android:layout_above="@+id/adView"
         android:layout_alignEnd="@+id/adView"
         android:layout_alignRight="@+id/adView"
+        android:textSize="26sp"
         android:background="@drawable/buttonshapesmall"
         android:text="@string/Results_back_btn" />
 

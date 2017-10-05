@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lukecaptaincode.diceroller.DiceRoller"
-    android:background="#000000"
+    android:background="@color/dark"
     android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
 
     <TextView
@@ -83,8 +83,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/DiceRoller_roll_btn"
+        android:textSize="26sp"
         android:id="@+id/DiceRoller_roll_btn"
-        android:background="@drawable/buttonshapesmall"
+        android:background="@drawable/buttonshape_small_selector"
         android:layout_marginTop="35dp"
         android:layout_below="@+id/DiceRoller_noSides_txt"
         android:layout_alignParentLeft="true"

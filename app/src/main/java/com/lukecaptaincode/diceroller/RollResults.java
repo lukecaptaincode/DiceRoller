@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -17,7 +17,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
-public class RollResults extends ActionBarActivity {
+public class RollResults extends AppCompatActivity {
     int[] results;
     LinearLayout linearLayout;
     TextView resultsText;
@@ -34,27 +34,28 @@ public class RollResults extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_roll_results);
         //adview
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         //Tyoe
-        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Nurjan.ttf");
+        Typeface myTypeface = Typeface.createFromAsset(getAssets(), "Decalotype-SemiBold.ttf");
+        Typeface myTypeface_Hero = Typeface.createFromAsset(getAssets(), "Heroic.ttf");
         //vars
         int diceNo = 1;
         results = (int[]) getIntent().getSerializableExtra("results");
         //Elements
-        lessThan = (CheckBox) findViewById(R.id.Results_MinusSort_rdb);
-        greaterThan = (CheckBox) findViewById(R.id.Results_PlusSort_rdb);
-        equalTo = (CheckBox) findViewById(R.id.Results_EqualSort_rdb);
-        linearLayout = (LinearLayout) findViewById(R.id.LineLay);
-        resultsText = (TextView) findViewById(R.id.Results_results_lbl);
-        backBtn = (Button) findViewById(R.id.Results_back_btn);
+        lessThan = findViewById(R.id.Results_MinusSort_rdb);
+        greaterThan = findViewById(R.id.Results_PlusSort_rdb);
+        equalTo = findViewById(R.id.Results_EqualSort_rdb);
+        linearLayout = findViewById(R.id.LineLay);
+        resultsText = findViewById(R.id.Results_results_lbl);
+        backBtn = findViewById(R.id.Results_back_btn);
         textView = new TextView[results.length];
-        filterText = (EditText) findViewById(R.id.Results_Filter_txt);
-        sortBtn = (Button) findViewById(R.id.Results_Sort_btn);
+        filterText = findViewById(R.id.Results_Filter_txt);
+        sortBtn = findViewById(R.id.Results_Sort_btn);
         //Typeface set
-        backBtn.setTypeface(myTypeface);
-        sortBtn.setTypeface(myTypeface);
+        backBtn.setTypeface(myTypeface_Hero);
+        sortBtn.setTypeface(myTypeface_Hero);
         filterText.setTypeface(myTypeface);
         resultsText.setTypeface(myTypeface);
         //Display results
@@ -65,7 +66,6 @@ public class RollResults extends ActionBarActivity {
             textView[i].setTypeface(myTypeface);
             textView[i].setTextColor(Color.parseColor("#ffffff"));
             textView[i].setTextSize(30);
-            //textView[i].setTag(i);
             linearLayout.addView(textView[i]);
             diceNo++;
         }

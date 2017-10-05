@@ -1,7 +1,6 @@
 package com.lukecaptaincode.diceroller;
 
 import java.security.SecureRandom;
-import java.util.ArrayList;
 
 /**
  * Created by Luke Captain on 23-Apr-15.

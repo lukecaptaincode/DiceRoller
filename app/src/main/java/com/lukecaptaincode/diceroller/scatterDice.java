@@ -1,18 +1,12 @@
 package com.lukecaptaincode.diceroller;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -21,13 +15,10 @@ import com.google.android.gms.ads.AdView;
 import java.security.SecureRandom;
 
 
-public class scatterDice extends ActionBarActivity {
+public class scatterDice extends AppCompatActivity {
     //ads
     AdRequest adRequest;
     AdView mAdView;
-    //Image variables
-    int[] arrowImageUris;
-    Bitmap[] arrowImages;
     //Gui Elements
     Button scatterButton;
     ImageView scatterImage;
@@ -53,8 +44,8 @@ public class scatterDice extends ActionBarActivity {
 
     public void setTypeface() {
         myTypeface = Typeface.createFromAsset(getAssets(), "Nurjan.ttf");
-        scatterText = (TextView) findViewById(R.id.ScatterDice_scatterText_lbl);
-        scatterImage = (ImageView) findViewById(R.id.ScatterDice_mainImage_img);
+        scatterText = findViewById(R.id.ScatterDice_scatterText_lbl);
+        scatterImage = findViewById(R.id.ScatterDice_mainImage_img);
         scatterButton.setTypeface(myTypeface);
         scatterText.setTypeface(myTypeface);
         helpButton.setTypeface(myTypeface);
@@ -62,14 +53,14 @@ public class scatterDice extends ActionBarActivity {
     }
 
     public void initButtons() {
-        scatterButton = (Button) findViewById(R.id.ScatterDice_scatterButton_btn);
+        scatterButton = findViewById(R.id.ScatterDice_scatterButton_btn);
         scatterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 scatterLogic(v);
             }
         });
-        helpButton = (Button)findViewById(R.id.ScatterDice_helpButton_btn);
+        helpButton = findViewById(R.id.ScatterDice_helpButton_btn);
         helpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,7 +78,7 @@ public class scatterDice extends ActionBarActivity {
     public void scatterLogic(View v) {
         random = new SecureRandom();
         randRes = random.nextInt(12 - 2 + 1) + 2;
-        imageChoose = random.nextInt(150 - 0 + 1) + 0;
+        imageChoose = random.nextInt(150 + 1);
         switch (imageChoose) {
             case 0:
                 scatterImage.setImageResource(R.drawable.scatter1);
@@ -555,7 +546,8 @@ public class scatterDice extends ActionBarActivity {
                 ||imageChoose == 119||imageChoose == 124||imageChoose == 129||imageChoose == 134||imageChoose == 139
                 ||imageChoose == 144)
         {
-            scatterText.setText("Direct hit!");
+            String directHit = "Direct hit!";
+            scatterText.setText(directHit);
         }
         else
         {
@@ -565,7 +557,7 @@ public class scatterDice extends ActionBarActivity {
     }
 
     public void loadAds() {
-        mAdView = ((AdView) findViewById(R.id.adView));
+        mAdView = findViewById(R.id.adView);
         adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
     }

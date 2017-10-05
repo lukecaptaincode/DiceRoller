@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lukecaptaincode.diceroller.scatterDice"
-    android:background="@color/Black">
+    android:background="@color/dark">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
