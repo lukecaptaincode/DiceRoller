@@ -19,6 +19,7 @@ import com.google.android.gms.ads.AdView;
 
 public class RollResults extends AppCompatActivity {
     int[] results;
+    int sortedAmount;
     LinearLayout linearLayout;
     TextView resultsText;
     TextView[] textView;
@@ -43,7 +44,8 @@ public class RollResults extends AppCompatActivity {
         //vars
         int diceNo = 1;
         results = (int[]) getIntent().getSerializableExtra("results");
-        //Elements
+        int sortedAmount = 0;
+        //Elemeints
         lessThan = findViewById(R.id.Results_MinusSort_rdb);
         greaterThan = findViewById(R.id.Results_PlusSort_rdb);
         equalTo = findViewById(R.id.Results_EqualSort_rdb);
@@ -108,10 +110,12 @@ public class RollResults extends AppCompatActivity {
 
     public void sort(View v) {
         String filter = filterText.getText().toString();
+        sortedAmount = 0;
         if(!equalTo.isChecked() && !greaterThan.isChecked()&& !lessThan.isChecked())
         {
             for (int i = 0; i < results.length; i++) {
                 textView[i].setVisibility(View.VISIBLE);
+                sortedAmount++;
             }
         }
         if (equalTo.isChecked()) {//start eqaul to if
@@ -121,8 +125,10 @@ public class RollResults extends AppCompatActivity {
                 }
                 if (results[i] == Integer.parseInt(filter)) {
                     textView[i].setVisibility(View.VISIBLE);
+                    sortedAmount++;
                 }
             }
+            resultsText.setText("Results\nSorted Amount: " + sortedAmount);
         }//end equal to if
         if (greaterThan.isChecked() && !equalTo.isChecked())
         {//start greater than if
@@ -132,8 +138,10 @@ public class RollResults extends AppCompatActivity {
                 }
                 if (results[i] < Integer.parseInt(filter)) {
                     textView[i].setVisibility(View.VISIBLE);
+                    sortedAmount++;
                 }
             }
+            resultsText.setText("Results\nSorted Amount: " + sortedAmount);
         }//end greater than if
         if (lessThan.isChecked() && !equalTo.isChecked())
         {//start lest than if
@@ -143,8 +151,10 @@ public class RollResults extends AppCompatActivity {
                 }
                 if (results[i] > Integer.parseInt(filter)) {
                     textView[i].setVisibility(View.VISIBLE);
+                    sortedAmount++;
                 }
             }
+            resultsText.setText("Results\nSorted Amount: " + sortedAmount);
         }//end less than if
 
         if (lessThan.isChecked() && equalTo.isChecked())
@@ -155,8 +165,10 @@ public class RollResults extends AppCompatActivity {
                 }
                 if (results[i] > Integer.parseInt(filter)) {
                     textView[i].setVisibility(View.VISIBLE);
+                    sortedAmount++;
                 }
             }
+            resultsText.setText("Results\nSorted Amount: " + sortedAmount);
         }//end less than equla to if
         if (greaterThan.isChecked() && equalTo.isChecked())
         {//start greater than equla to if
@@ -166,8 +178,10 @@ public class RollResults extends AppCompatActivity {
                 }
                 if (results[i] < Integer.parseInt(filter)) {
                     textView[i].setVisibility(View.VISIBLE);
+                    sortedAmount++;
                 }
             }
+            resultsText.setText("Results\nSorted Amount: " + sortedAmount);
         }//end greater than equla to if
     }
 

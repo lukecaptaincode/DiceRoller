@@ -43,7 +43,7 @@ public class scatterDice extends AppCompatActivity {
     }
 
     public void setTypeface() {
-        myTypeface = Typeface.createFromAsset(getAssets(), "Nurjan.ttf");
+        myTypeface = Typeface.createFromAsset(getAssets(), "Decalotype-SemiBold.ttf");
         scatterText = findViewById(R.id.ScatterDice_scatterText_lbl);
         scatterImage = findViewById(R.id.ScatterDice_mainImage_img);
         scatterButton.setTypeface(myTypeface);

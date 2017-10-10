@@ -1,0 +1,1539 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context="com.lukecaptaincode.diceroller.WoundCounter">
+
+    <TextView
+        android:id="@+id/WoundsCounter_header_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/WoundsCounter_header_lbl"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/WoundsCounter_nameHeader_lbl"
+        android:layout_alignStart="@+id/WoundsCounter_nameHeader_lbl" />
+
+    <TextView
+        android:id="@+id/WoundsCounter_nameHeader_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/WoundsCounter_nameHeader_lbl"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_below="@+id/WoundsCounter_header_lbl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp" />
+
+    <TextView
+        android:id="@+id/WoundsCounter_woundsHeader_lbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/WoundCounter_scroller_scrl"
+        android:layout_centerHorizontal="true"
+        android:text="@string/WoundsCounter_woundsHeader_lbl"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/WoundCounter_scroller_scrl"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/WoundsCounter_nameHeader_lbl"
+        android:layout_marginTop="21dp"
+        android:background="#000000"
+        android:fillViewport="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainRelLayout"
+            android:orientation="vertical"
+            android:background="@color/primary">
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:id="@+id/RelLayout1"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="15dp">
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName1_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundsCounter_wounds1_txt"
+
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds1_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_wound1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del1_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del1_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/WoundCounter_add1_btn"
+                    android:layout_alignBottom="@+id/WoundCounter_add1_btn"
+                    android:layout_alignParentEnd="true"
+
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound2_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del2_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add2_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del2_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName2_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds2_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del2_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout2"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound3_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del3_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add3_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del3_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName3_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds3_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del3_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout3"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound4_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del4_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add4_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del4_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName4_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds4_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del4_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout4"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound5_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del5_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add5_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del5_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName5_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds5_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del5_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout5"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound6_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del6_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add6_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del6_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName6_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds6_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del6_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout6"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound7_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del7_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add7_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del7_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName7_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds7_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del7_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout8"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout7"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound8_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del8_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add8_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del8_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName8_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds8_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del8_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout9"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout8"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound9_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del9_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add9_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del9_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName9_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds9_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del9_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout10"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout9"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound10_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del10_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add10_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del10_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName10_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds10_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del10_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout10"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound11_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del11_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add11_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del11_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName11_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds11_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del11_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout12"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout11"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound12_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del12_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add12_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del12_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName12_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds12_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del12_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout12"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound13_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del13_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add13_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del13_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName13_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds13_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del13_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout14"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout13"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound14_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del14_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add14_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del14_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName14_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds14_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del14_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout15"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout14"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound15_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del15_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add15_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del15_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName15_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds15_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del15_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout16"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout15"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound16_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del16_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add16_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del16_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName16_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds16_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del16_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout17"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout16"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound17_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del17_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add17_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del17_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName17_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds17_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del17_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout18"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout17"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound18_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del18_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add18_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del18_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName18_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds18_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del18_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout19"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout18"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound19_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del19_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add19_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del19_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName19_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds19_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del19_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/RelLayout20"
+                android:layout_width="match_parent"
+                android:layout_height="126dp"
+                android:background="@drawable/woundcounterdiv"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context="com.lukecaptaincode.diceroller.RollResults"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/RelLayout19"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="15dp">
+
+                <Button
+                    android:id="@+id/WoundCounter_wound20_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/WoundCounter_del20_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="@string/WoundsCount_woundBtn_btn"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_add20_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/WoundCounter_del20_btn"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:layout_marginRight="15dp"
+                    android:text="Add"
+                    android:textSize="12sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_charName20_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/editextbacksmall"
+                    android:text="@string/WoundsCounter_charNameBox_txt"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/WoundsCounter_wounds20_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/editextbacksmaller"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:text="@string/WoundsCounter_woundsBox_txt"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/WoundCounter_del20_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/buttonshapesmaller"
+                    android:text="Del"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/woundCounter_adId"></com.google.android.gms.ads.AdView>
+
+
+</RelativeLayout>

@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lukecaptaincode.diceroller"
-    android:versionCode="2"
-    android:versionName="1.1">
+    package="com.lukecaptaincode.diceroller">
 
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"
+        android:anyDensity="true" />
     <!-- Include required permissions for Google Mobile Ad to run -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -41,12 +45,13 @@
             android:name=".DiceRoller"
             android:label="@string/app_name"
             android:theme="@style/AppTheme"
-            android:windowSoftInputMode="adjustPan"
+            android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RollResults"
             android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"
             android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
         </activity>
@@ -58,12 +63,13 @@
         <activity
             android:name=".WoundCounter"
             android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustPan">
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".scatterDice"
             android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden"
             android:screenOrientation="portrait">
         </activity>
     </application>

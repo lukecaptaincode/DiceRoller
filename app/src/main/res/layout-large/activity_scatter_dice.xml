@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lukecaptaincode.diceroller.scatterDice"
+    android:background="@color/dark">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="270dp"
+            android:scaleType="fitStart"
+            android:id="@+id/ScatterDice_mainImage_img"
+            android:src="@drawable/scatterhit"
+            android:contentDescription="@string/scatterDice"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ScatterDice_Text"
+            android:id="@+id/ScatterDice_scatterButton_btn"
+            android:background="@drawable/buttonshapesmall"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="59dp"
+            android:layout_marginEnd="59dp" />
+
+        <Button
+            android:id="@+id/ScatterDice_helpButton_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ScatterDice_mainImage_img"
+            android:layout_alignLeft="@+id/ScatterDice_scatterButton_btn"
+            android:layout_alignStart="@+id/ScatterDice_scatterButton_btn"
+            android:background="@drawable/buttonshapesmall"
+            android:text="Help" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/ScatterDice_scatterText_lbl"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            android:layout_marginTop="23dp"
+            android:layout_below="@+id/ScatterDice_mainImage_img"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp" />
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="LARGE_BANNER"
+        ads:adUnitId="@string/scatterDice_adId"></com.google.android.gms.ads.AdView>
+
+</RelativeLayout>
